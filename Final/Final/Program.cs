@@ -22,26 +22,25 @@ class Challenges
         Console.WriteLine(FunctionH(a1));
         Console.WriteLine(FunctionM(a1));
 
-
-
-
-        
-
-
-
-
-        //User Input for Int
-        /*Console.WriteLine("Enter your number");
-        int a = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter number of draws");
-        int a1 = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter number of losses");
-        int a2 = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("The month is " + MonthName(a));*/
-
-
+        runStartUpCode();
     }
-
+    static void runStartUpCode()
+    {
+        for(int i = 1; i < 20; i++)
+        {
+            Console.WriteLine("Hello there, my name is Ashton and today I have a variety of programs for you to choose from.");
+            Console.WriteLine("Choose a function:\n 1: Sum \n 2: Convert \n 3: PlusOne \n 4: Power \n 5: AgeDays \n 6: triArea \n 7: lessThanOrEqualToZero \n 8: lessThan100 \n 9: EqualTo \n 10: GiveMeSomething \n 11: Reverse \n 12: howManySeconds \n 13: internalAnglesSum \n 14: nameString \n 15: AndYes \n 16: Points \n 17: perimeterOfRec \n 18: helloName \n 19: animals \n 20: footballPoints \n 21: monthName \n 22: findMinMax \n 23: GetAbsSum \n 24: calculateExponent \n 25: MultiplyByLength \n 26: HammingDistance");
+            Console.WriteLine("Please choose the number of the function that you would like to try.");
+            int a1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(Function(a1));
+            Console.WriteLine(FunctionB(a1));
+            Console.WriteLine(FunctionS(a1));
+            Console.WriteLine(FunctionA(a1));
+            Console.WriteLine(FunctionC(a1));
+            Console.WriteLine(FunctionH(a1));
+            Console.WriteLine(FunctionM(a1));
+        }
+    }
     public static int Sum(int x, int y)
     {
         int c = x + y;
@@ -249,11 +248,22 @@ class Challenges
         }
         return count;
     }
+    public static bool? FunctionR(int a)
+    {
+        if(a == 0)
+        {
+            return false;
+        }
+        else
+        {
+            return null;
+        }
+    }
     public static int? FunctionM(int a)
     {
         if (a == 25)
         {
-            Console.WriteLine("This function returns the amount of letters that are in the phrase that the user inputs");
+            Console.WriteLine("This function returns the value of a number multipled by how many integers are in array");
             Console.WriteLine("Enter a number");
             int a1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter a number");
@@ -282,9 +292,10 @@ class Challenges
             Console.WriteLine("This function gives the difference in the two phrases that the user inputs");
             Console.WriteLine("Enter a phrase");
             string a1 = Console.ReadLine();
-            Console.WriteLine("Enter a phrase");
+            Console.WriteLine("Enter a phrase of the same length as the previous phrase");
             string a2 = Console.ReadLine();
-            return HammingDistance(a1, a2);
+            return HammingDistance(a1, a2); 
+
         }
         else
         {
